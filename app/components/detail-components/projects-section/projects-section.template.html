@@ -1,0 +1,102 @@
+<div id="intro-panel" style="overflow:hidden;">
+    <div class="row">
+        <h1 class="title" dir-terminal-type="" on-completion="p1 = true">My Solutions</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-3 col-md-3">
+            <div class="row">
+                <img class="solution-grc-chromata" src="assets/img/grc.jpg" style="max-width: 100%;">
+            </div>
+            <div class="row">
+                <h5><strong><a ng-click="a1=true;a2=false;a3=false;a4=false" style="cursor: pointer">NASA GRC</a></strong></h5>
+            </div>
+        </div>
+        <div class="col-sm-3 col-md-3">
+            <div class="row">
+                <img class="solution-bass-chromata" src="assets/img/bass.jpg" style="max-width: 100%;">
+            </div>
+            <div class="row">
+                <h5><strong><a ng-click="a1=false;a2=true;a3=false;a4=false" style="cursor: pointer">Bass Connections</a></strong></h5>
+            </div>
+        </div>
+        <div class="col-sm-3 col-md-3">
+            <div class="row">
+                <img class="solution-gs-chromata" src="assets/img/gs.jpg" style="max-width: 100%;">
+            </div>
+            <div class="row">
+                <h5><strong><a ng-click="a1=false;a2=false;a3=true;a4=false" style="cursor: pointer">Goldman Sachs</a></strong></h5>
+            </div>
+        </div>
+        <div class="col-sm-3 col-md-3">
+            <div class="row">
+                <img class="solution-game-chromata" src="assets/img/game.jpg" style="max-width: 100%;">
+            </div>
+            <div class="row">
+                <h5><strong><a ng-click="a1=false;a2=false;a3=false;a4=true" style="cursor: pointer">Java Game Development</a></strong></h5>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="row">
+        <div class="col-sm-7 col-md-7">
+            <h1 style="font-family: 'Roboto'; color:#D3D3D3" ng-show="a1">NASA Engineering</h1>
+            <h1 style="font-family: 'Roboto'; color:#D3D3D3" ng-show="a2">Bass Connections</h1>
+            <h1 style="font-family: 'Roboto'; color:#D3D3D3" ng-show="a3">Goldman Sachs Tech</h1>
+            <h1 style="font-family: 'Roboto'; color:#D3D3D3" ng-show="a4">Java Game Development</h1>
+
+            <div ng-show="a1">
+                <p>In the summer of 2015, I was really part of something special.</p>
+                <p>I developed proof-of-concept research for the emulation of telecommunication systems in the Near Earth Network (NEN) and the Space Network (SN).</p>
+                <p>I helped to Dockerize computationally heavy applications that model communication signals during parallel processing.</p>
+                <p>Take a look at my results in the research <a target="_blank" href="assets/pdf/sat-comm-network-docker-AJUR.pdf">paper</a> I helped write and the open source software <a target="_blank" href="https://www.docker.com/">Docker</a>.</p>
+            </div>
+
+            <div ng-show="a2">
+                <p>In 2014-2015, I was part of a team to develop an application to disaggregate and detect anomalies in energy data.</p>
+                <p>We streamed live data from the Duke University Smart Home to develop a machine learning algorithm to classify malfunctioning home-appliances.</p>
+                <p>With historical data, we trained our algorithm to conduct forecasting and anomaly detection.</p>
+                <p>Further details of the project can be found <a target="_blank" href="https://bassconnections.duke.edu/project-teams/university-laboratory-smart-grid-data-analytics-2014-2015">here</a>. Take a look at our data toolkit on Github <a target="_blank" href="https://github.com/abhishekbala/DukeUniversitySmartHome-DataToolKit">here</a> as well as our poster results <a target="_blank" href="assets/pdf/bass-connections-poster.pdf">here</a>.</p>
+            </div>
+
+            <div ng-show="a3">
+                <p>In the summer of 2016, I developed software for the GS Compliance Division. I created solutions to interpret harmful electronic communications sent and received via the GS Network in order to mitigate risk across the firm.</p>
+                <p>The solutions process millions of messages a day, so I designed a multithreaded extraction process to schedule interpreted retrievals. I also created a web-based dashboard to help users interpret the retrieved data.</p>
+                <p>Take a look <a href="http://www.goldmansachs.com/careers/why-goldman-sachs/our-divisions/global-compliance/" target="_blank">here</a> for more information on compliance in finance.</p>
+            </div>
+
+            <div ng-show="a4">
+                <p>In the fall of 2015, I developed software for gaming applications as part of a Software Design and Implementation course.</p>
+                <p>I developed a 2-D top-down shooter to help children learn math. Check out the Github for <a target="_blank" href="https://github.com/abl17/MathBullets">Math Bullets</a></p>
+                <p>I developed an educational programming language to allow children to learn functional programming in a fun way. Check out the Github for <a target="_blank" href="https://github.com/abl17/SLogoProject">SLogo</a> here.</p>
+                <p>I developed a game authoring environment using JavaFX. Check out the Github for <a target="_blank" href="https://github.com/abl17/GameAuthoringVooga">Game Authoring Vooga</a> here.</p>
+            </div>
+        </div>
+        <div class="col-sm-5 col-md-5">
+            <div class="monitor-wrapper">
+                <img src="assets/img/monitor.png">
+                <div class="monitor-description">
+                    <div class="monitor-description-content">
+                        <p dir-terminal-type="" on-completion="showInputForm()" start-typing="p1" ng-show="p1">
+                            [visitor]:~$ Type in 'ls' to see my skills.
+                        </p>
+                        <form ng-submit="textEntered()" ng-show="p1a">
+                            [visitor]:~$ <input type="text" ng-model="userInput" id="myInput" autocomplete="off" autofocus>
+                        </form>
+                        <!--<p ng-show="p2">[visitor]:~$ ls</p>-->
+
+                        <div ng-show="p2" style="font-size: medium;">
+                            <h3 style="margin-top: 0;">Skills</h3>
+                            <p><strong>Web Development:</strong> HTML5, CSS3, Javascript, JQuery, AngularJS</p>
+                            <p><strong>Backend Development:</strong> Java, C#, C, Spring MVC, Dropwizard, ElasticSearch</p>
+                            <p><strong>Computational Technologies:</strong> Matlab, Mathematica, Verilog, Arduino</p>
+                            <p><strong>Testing Frameworks:</strong> JUnit, Groovy, Spock</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

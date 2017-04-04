@@ -1,0 +1,69 @@
+<div id="intro-panel" style="overflow:hidden;">
+    <div class="row">
+        <div class="col-sm-3 col-md-3">
+            <div id="circle-1">
+                <img class="img-circle" id="index-portrait" src='assets/img/funness.jpg'>
+            </div>
+        </div>
+
+        <div class="col-sm-9 col-md-9">
+            <div id="intro-info" class="intro-info-row">
+                <h1 class="title" dir-terminal-type="" on-completion="p1 = true">Interests</h1>
+                <h5 class="slogan" dir-terminal-type="" start-typing="p1" ng-show="p1" on-completion="p2 = true">
+                    What I love, what I hate, and what helps me get up every morning.</h5>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <div class="row">
+        <div class="col-sm-3 col-md-3">
+            <br>
+            <div class="row" ng-show="q1">
+                <img class="solution-bluemarble-chromata" src="assets/img/bluemarble.jpg" style="max-width: 100%;">
+            </div>
+            <div class="row" ng-show="q2">
+                <img class="solution-bigdata-chromata" src="assets/img/bigdata.jpg" style="max-width: 100%;">
+            </div>
+            <div class="row" ng-show="q3">
+                <img class="solution-outdoors-chromata" src="assets/img/outdoors.jpg" style="max-width: 100%;">
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4">
+            <div ng-show="q1">
+                <p>Ever since I was a kid, I've been fascinated by anything having to do with space. That's probably why I enjoyed interning at <strong>NASA</strong> so much.</p>
+                <p>I'm a strong believer in space exploration, not just because it helps us discover more about nature, but also because it unites us.</p>
+                <p>Check out the cool stuff that NASA's doing with the 2020 Mars Rover <a target="_blank" href="http://mars.nasa.gov/mars2020/">here</a>.</p>
+            </div>
+            <div ng-show="q2">
+                <p>I first started becoming interested in data science in 2014 while working on the <strong>Bass Connections</strong> data analytics project.</p>
+                <p>Since then, I've increasingly been shown the powers of machine learning, and I have driven myself to learn more about its applications.</p>
+                <p>Machine learning is exciting stuff because it's the future. That's why I wish to be on the cutting edge of it.</p>
+            </div>
+            <div ng-show="q3">
+                <p>I'm a big fan of the outdoors, and try to spend my free time hiking, fishing, or traveling to see the world from a different view.</p>
+                <p>From the times that I've enjoyed nature, I've become a strong believer in environmental conservation.</p>
+                <p>If you want to see a view like the picture on the left, visit <a target="_blank" href="http://www.ncparks.gov/hanging-rock-state-park">Hanging Rock, NC</a>!</p>
+            </div>
+        </div>
+        <div class="col-sm-5 col-md-5">
+            <div class="monitor-wrapper">
+                <img src="assets/img/monitor.png">
+                <div class="monitor-description">
+                    <div class="monitor-description-content">
+                        <h3 style="margin-top: 0;" dir-terminal-type="" start-typing="q1" ng-show="q1">Space</h3>
+                        <h3 style="margin-top: 0;" dir-terminal-type="" start-typing="q2" ng-show="q2">Machine Learning</h3>
+                        <h3 style="margin-top: 0;" dir-terminal-type="" start-typing="q3" ng-show="q3">Outdoor Activities</h3>
+
+                        <p dir-terminal-type="" start-typing="p2" ng-show="p2" on-completion="p3 = true">
+                            Navigate using the command line. Available commands are <strong>/space</strong>, <strong>/bigdata</strong>, and <strong>/outdoors</strong>.
+                        </p>
+                        <form ng-submit="textEntered()" ng-show="p3">
+                            [visitor]:~$ <input type="text" ng-model="userInput" id="myInput" autocomplete="off" autofocus>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

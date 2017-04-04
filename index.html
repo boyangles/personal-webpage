@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Austin Liu</title>
+    <!--Google analytics-->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-82630171-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/css/dirTerminalType.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/css/main.css" />
+</head>
+
+<body ng-app="personalwebpage" id="bodyID">
+
+<div class="navbar navbar-inverse navbar-fixed-top" style="position:relative; margin-bottom: 0px;" id="topHeaderID">
+    <navigation-header></navigation-header>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-8 col-md-8">
+            <detail-router></detail-router>
+        </div>
+
+        <div class="col-sm-4 col-md-4" style="padding-left: 0;">
+            <asteroids-game></asteroids-game>
+        </div>
+    </div>
+</div>
+
+<div class="footer navbar-inverse" id="bottomFooterID">
+    <metadata-footer></metadata-footer>
+</div>
+
+<!--------------------------------------------Global Dependencies-------------------------------------------->
+<!--Requirements for UI Bootstrap-->
+<!--AngularJS-->
+<script type="text/javascript" src="./assets/libs/angular.min.js"></script>
+<!--Angular UI Router-->
+<script type="text/javascript" src="./assets/libs/angular-ui-router.min.js"></script>
+<!--Angular Animate-->
+<script type="text/javascript" src="./assets/libs/angular-animate.min.js"></script>
+<!--Angular Touch-->
+<script type="text/javascript" src="./assets/libs/angular-touch.min.js"></script>
+<!--UI Bootstrap-->
+<script type="text/javascript" src="./assets/libs/ui-bootstrap.min.js"></script>
+<!--PhaserJS-->
+<script type="text/javascript" src="assets/libs/phaser.min.js"></script>
+<!--dirTerminalType-->
+<script type="text/javascript" src="./assets/js/dirTerminalType.js"></script>
+<!--Chromata-->
+<script type="text/javascript" src="./assets/js/chromata.min.js"></script>
+
+<!-----------------------------------------Project Specific Dependencies----------------------------------------->
+<!--Main app.module.js dependency-->
+<script type="text/javascript" src="app/app.module.js"></script>
+<!--DETAILS-COMPONENTS-->
+    <!--Navigation Header-->
+<script type="text/javascript" src="app/components/navigation-header/navigation-header.component.js"></script>
+<script type="text/html" src="app/components/navigation-header/navigation-header.template.html"></script>
+    <!--HELPER Shared Service-->
+<script type="text/javascript" src="app/shared/services/nagivation.service.js"></script>
+<!--Details Router-->
+<script type="text/javascript" src="app/components/detail-components/detail-router.component.js"></script>
+<script type="text/html" src="app/components/detail-components/detail-router.template.html"></script>
+    <!--Personal Section-->
+<script type="text/javascript" src="app/components/detail-components/personal-section/personal-section.component.js"></script>
+<script type="text/html" src="app/components/detail-components/personal-section/personal-section.template.html"></script>
+    <!--Projects Section-->
+<script type="text/javascript" src="app/components/detail-components/projects-section/projects-section.component.js"></script>
+<script type="text/html" src="app/components/detail-components/projects-section/projects-section.template.html"></script>
+    <!--Interests Section-->
+<script type="text/javascript" src="app/components/detail-components/interests-section/interests-section.component.js"></script>
+<script type="text/html" src="app/components/detail-components/interests-section/interests-section.template.html"></script>
+    <!--Professional Section-->
+<script type="text/javascript" src="app/components/detail-components/professional-section/professional-section.component.js"></script>
+<script type="text/html" src="app/components/detail-components/professional-section/professional-section.template.html"></script>
+    <!--Contact Section-->
+<script type="text/javascript" src="app/components/detail-components/contact-section/contact-section.component.js"></script>
+<script type="text/html" src="app/components/detail-components/contact-section/contact-section.template.html"></script>
+
+<!--Metadata Footer component-->
+<script type="text/javascript" src="app/components/metadata-footer/metadata-footer.component.js"></script>
+<script type="text/html" src="app/components/metadata-footer/metadata-footer.template.html"></script>
+
+<!--Asteroids Game-->
+<script type="text/javascript" src="app/components/asteroids-game/asteroids-game.component.js"></script>
+<script type="text/html" src="app/components/asteroids-game/asteroids-game.template.html"></script>
+<script type="text/javascript" src="app/components/asteroids-game/asteroids-game.service.js"></script>
+</body>
+
+</html>

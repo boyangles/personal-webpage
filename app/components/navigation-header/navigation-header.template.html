@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-targe=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" ng-if="homepageSection.length>=1" ui-sref="{{homepageSection[0].id}}">{{homepageSection[0].name}}</a>
+    </div>
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav" ng-repeat="section in sections">
+            <li ng-if="!section.homepage"><a ui-sref="{{section.id}}">{{section.name}}</a></li>
+        </ul>
+    </div>
+</div>
